@@ -1,0 +1,42 @@
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    height: 70px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+    width:100%;
+    display: flex;
+    height: 40px;
+}
+
+.col-xs-6 {
+    width: 50%;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.marginTop{
+    padding-top: 25px;
+    margin-bottom: 10px;
+}
+
+.horizontal-bar{
+    width:100%;
+    height:5px;
+    background-color: #496b84;
+    margin:0 !important;
+    padding:0 !important;
+    border:none !important;
+}
+.logo{
+    height: 66px;
+    margin-left: 10px;
+    margin-top: 3px;
+}

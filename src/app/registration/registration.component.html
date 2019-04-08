@@ -1,0 +1,105 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<app-nav-bar></app-nav-bar>
+<div class="loginWrap">
+    <!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-6 offset-md-3">
+                <form  [formGroup]="registerForm" (ngSubmit)="onRegistration()">
+                    <div style="text-align:center;font-size: 20px;margin-top: 120px;">Almost there, few more details</div>
+                    <mat-form-field class="inputField">
+                        <input type="text" matInput  class="loginInput"  id="fName" 
+                            formControlName="firstName" 
+                            [errorStateMatcher]="matcher"
+                            title="First Name" matInput placeholder="First Name *">
+                        <mat-error *ngIf="submitted && f.firstName.errors && f.firstName.errors.required">
+                                First Name is required
+                        </mat-error>
+                    </mat-form-field>
+
+                    <mat-form-field class="inputField">
+                        <input type="text" matInput  class="loginInput"  id="lName" 
+                            formControlName="lastName" 
+                            [errorStateMatcher]="matcher"
+                            title="Last Name" matInput placeholder="Last Name *">
+                        <mat-error *ngIf="submitted && f.lastName.errors && f.lastName.errors.required">
+                            Last Name is required
+                        </mat-error>
+                    </mat-form-field>
+
+                    
+                    <mat-form-field class="inputField">
+                        <input type="text" matInput  class="loginInput"  id="physicalAddress" 
+                            formControlName="physicalAddress" 
+                            [errorStateMatcher]="matcher"
+                            title="Physical Address " matInput placeholder="Physical Address *">
+                        <mat-error *ngIf="submitted && f.physicalAddress.errors && f.physicalAddress.errors.required">
+                            Physical address is required.
+                        </mat-error>
+                    </mat-form-field>
+    
+                        <mat-form-field class="inputField">
+                            <input type="text" matInput  class="loginInput"  id="mailingAddress" 
+                                formControlName="mailingAddress" 
+                                [errorStateMatcher]="matcher"
+                                title="Mailing Address" matInput placeholder="Mailing Address *">
+                            <mat-error *ngIf="submitted && f.mailingAddress.errors && f.mailingAddress.errors.required">
+                                Mailing address is required.
+                            </mat-error>
+                        </mat-form-field>
+
+                        <mat-form-field class="inputField">
+                            <input type="text" matInput  class="loginInput"  id="City" 
+                                formControlName="city" 
+                                [errorStateMatcher]="matcher"
+                                title="City" matInput placeholder="City*">
+                            <mat-error *ngIf="submitted && f.city.errors && f.city.errors.required">
+                                City is required.
+                            </mat-error>
+                        </mat-form-field>  
+                            
+                        <mat-form-field class="inputField">                             
+                                <input type = "text" 
+                                placeholder = "State" 
+                                aria-label = "Number" 
+                                matInput 
+                                [matAutocomplete] = "auto">
+                             <mat-autocomplete #auto = "matAutocomplete">
+                                <mat-option *ngFor = "let s of usaStates" [value] = "s">
+                                   {{s}}
+                                </mat-option>
+                             </mat-autocomplete>
+                        
+                            
+                            <!-- <mat-error *ngIf="submitted && f.state.errors && f.state.errors.required">
+                                State is required.
+                            </mat-error> -->
+                          </mat-form-field>
+
+
+                        <mat-form-field class="inputField">
+                            <input type="number" matInput  class="loginInput"  id="Zip-Code" 
+                                formControlName="zipCode" 
+                                [errorStateMatcher]="matcher"
+                                title="Zip-Code" matInput placeholder="Zip-Code *">
+                            <mat-error *ngIf="submitted && f.zipCode.errors && f.zipCode.errors.required">
+                                Zip Code is required.
+                            </mat-error>
+                        </mat-form-field>
+                    
+                    
+                        <div class="formSubmitButton">
+                            <button class="btn btn-primary">Register</button>
+                        </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- credits -->
+
+  </div>
+  

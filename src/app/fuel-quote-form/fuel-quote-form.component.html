@@ -1,0 +1,91 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<app-nav-bar></app-nav-bar>
+<div class="loginWrap">
+    <!-- main app container -->
+<div class="jumbotron">
+    <div class="container">
+        <div class="row">
+            
+            <div class="col-md-6 offset-md-3">
+                    <div style="text-align:center;font-size: 20px;margin-top: 120px;">Fuel Quote Detail</div>
+
+                    <div class="backButton"  style="margin-left:3%;margin-top: 0px;position:absolute;">
+                            <button (click)="gotToRegestration()" style="color:black;cursor: pointer;" class="btn btn-primary">Back</button>
+                    </div>
+                <form  [formGroup]="registerForm" (ngSubmit)="onRegistration()">                        
+                        <!-- <div style="text-align:center;font-size: 20px;margin-top: 120px;">Fuel Quote Detail</div> -->
+                    <mat-form-field class="inputField">
+                        <input type="number" matInput  class="loginInput"  id="gNumber" 
+                            (focusout)="priceAndGallonsFocusOut()"
+                            formControlName="numberOfGallons" 
+                            [errorStateMatcher]="matcher"
+                            title="Number of Gallons" matInput placeholder="Number of Gallons *">
+                        <mat-error *ngIf="submitted && f.numberOfGallons.errors && f.numberOfGallons.errors.required">
+                                Number of gallons is required.
+                        </mat-error>
+                    </mat-form-field>
+
+                    
+
+                    <mat-form-field class="inputField">
+                        <input type="text" matInput  class="loginInput"  id="lName" 
+                            formControlName="deliveryAddress" 
+                            [errorStateMatcher]="matcher"
+                            title="Delivery Address" matInput placeholder="Delivery Address*">
+                        <mat-error *ngIf="submitted && f.deliveryAddress.errors && f.deliveryAddress.errors.required">
+                            Delivery address is required.
+                        </mat-error>
+                    </mat-form-field>
+
+                    
+                    <mat-form-field class="inputField">
+                        <input type="date" matInput  class="loginInput"  id="dDate" 
+                            formControlName="deliveryDate" 
+                            [errorStateMatcher]="matcher"
+                            title="Delivery Date" matInput placeholder="Delivery Date *">
+                        <mat-error *ngIf="submitted && f.deliveryDate.errors && f.deliveryDate.errors.required">
+                            Delivery date is required.
+                        </mat-error>
+                    </mat-form-field>
+
+                       
+
+                    <hr/>
+
+                    <mat-form-field class="inputField">
+                        <label>Suggested Price</label>
+                            <input type="text" matInput  class="loginInput"  id="sPrice"
+                                (focusout)="priceAndGallonsFocusOut()" 
+                                formControlName="suggestedPrice" 
+                                [errorStateMatcher]="matcher"
+                                >
+                            
+                    </mat-form-field>
+
+                    <mat-form-field class="inputField">
+                        <label>Total Amount Due</label>
+                            <input type="number" matInput  class="loginInput"  id="amountDue"
+                                [readonly]="true"
+                                title="Total Amount Due" matInput placeholder="{{totalAmount}}">
+                        </mat-form-field>
+
+                    <div>
+                        <div class="formSubmitButton">
+                            <button class="btn btn-primary"> Submit</button>
+                        
+                            <button class="btn btn-secondary" style="margin:9px;">Quote History</button>
+                        </div>            
+                    </div>
+                   
+                
+                </form>
+            </div>
+        
+        </div>
+    </div>
+</div>
+
+<!-- credits -->
+
+  </div>
+  

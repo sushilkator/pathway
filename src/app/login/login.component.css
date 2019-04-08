@@ -1,0 +1,77 @@
+.loginWrap {
+    position: relative;
+    min-height: 100vh;
+    background-color: #eee;
+    background: url(../../assets/bg.jpg) no-repeat center top/cover;
+    display: flex;
+    
+}
+.loginWrap .loginPopup {
+    margin-top: 10px;
+    border-radius: 4px;
+    padding: 50px 15px;
+    background: #fff;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 400px;
+    margin: auto;
+    box-shadow: 0 0 5px 4px rgba(0, 0, 0, 0.2);
+}
+.registrationForm .labelWrap {
+    position: relative;
+    padding-top: 24px;
+    margin-bottom: 20px;
+}
+.inputField{
+    width: 100% !important;
+}
+.paddingTop{
+    padding-top: 8px;
+}
+.btn-reg {
+    background-color: #496b84;
+}
+.btn-reg {
+    font-size: 16px;
+    min-width: 130px;
+    padding: 8px 15px;
+    color: #fff;
+}
+.btn {
+    display: inline-block;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    touch-action: manipulation;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.text-center {
+    text-align: center;
+}
+.marTop50 {
+    margin-top: 50px;
+}
+.loginInput{     
+    color: #333333;
+    font-size: 16px;
+    display: block;
+    width: 100%;   
+}
+.registration{
+    position: absolute;
+    text-align: right;
+    margin-top: -28px;
+    width: 100%;
+    padding-right: 27px;
+    
+}
+
+.registrationAgain{
+    padding-right:27px
+}

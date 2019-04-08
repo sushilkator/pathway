@@ -1,0 +1,34 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="loginWrap">
+    <div class="loginPopup">
+      <form [formGroup]="registerForm" (ngSubmit)="onLoginOrRegistration(loginText.textValue)" class="registrationForm" name="emailForm" >
+        <div class="labelWrap">
+            <mat-form-field class="inputField">
+                <input type="email" matInput  class="loginInput" name="email" id="loginEmail" 
+                    formControlName="email" 
+                    [errorStateMatcher]="matcher"
+                  title="Email address" matInput placeholder="Email address *">
+                  <mat-error *ngIf="f.email.errors">
+                    Please enter a valid email address
+                  </mat-error>
+            </mat-form-field>
+  
+            <mat-form-field class="inputField paddingTop">
+                <input type="password" matInput  class="loginInput" name="password" 
+                  formControlName="password"
+                  [errorStateMatcher]="matcher"
+                  id="password" title="Password" matInput placeholder="Password *">
+                  <mat-error *ngIf="f.password.errors">
+                    Password must be at least 6 characters
+                  </mat-error>
+            </mat-form-field> 
+        </div>
+        <div class="registration"><a href="javascript:void(0)" (click)="toggleLoginText(loginText.textValue)" class="registrationAgain">{{loginText.displayText}}</a></div>
+        <div class="text-center">
+          <input  type="Submit" title="Submit" value="{{loginText.textValue}}" class="btn btn-reg">
+        </div>
+        <p class="error" *ngIf="userNamePassWordError">Invalid User Name or Password</p>
+      </form>
+    </div>
+  </div>
+  
